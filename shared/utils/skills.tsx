@@ -44,6 +44,14 @@ const SKILLS: Skill[] = [
   {
     name: 'Git',
     src: '/images/skills/git.svg'
+  },
+  {
+    name: 'Postgres',
+    src: '/images/skills/postgresql.svg'
+  },
+  {
+    name: 'AWS',
+    src: '/images/skills/amazon2.svg'
   }
 ];
 
