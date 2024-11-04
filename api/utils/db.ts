@@ -2,6 +2,7 @@ import { MongoClient } from 'mongodb';
 
 let dbClient: MongoClient;
 export async function initDbClient(): Promise<MongoClient> {
+  console.log("🚀 ~ initDbClient ~ process.env.MONGODB_URI:", process.env.MONGODB_URI)
   dbClient = await MongoClient.connect(process.env.MONGODB_URI || '', {
     useNewUrlParser: true,
     useUnifiedTopology: true,

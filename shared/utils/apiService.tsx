@@ -1,8 +1,7 @@
 import axios from 'axios';
 import { Company, PersonalDetails, Project } from './types';
 
-export const BASE_URL = `${process.env.BASE_URL}/api` || 'https://harshgoel.me/api';
-
+export const BASE_URL = `${process.env.NEXT_PUBLIC_BASE_URL}/api`;
 export async function getPersonalDetails(): Promise<PersonalDetails | boolean> {
   try {
     const { data } = await axios.get(`${BASE_URL}/me`);

@@ -6,7 +6,7 @@ let dbClient: MongoClient;
 export default async (req: NextApiRequest, res: NextApiResponse): Promise<void> => {
   try {
     dbClient = await getDbClient();
-    const data = await dbClient.db().collection('details').findOne({});
+    const data = await dbClient.db().collection('personaldata').findOne({});
     res.statusCode = 200;
     res.json(data);
   } catch (err) {

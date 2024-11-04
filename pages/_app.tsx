@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps, router }: AppProps): JSX.Element {
 
   useEffect(() => {
     setLoading(false);
-  });
+  }, []);
 
   const spring = {
     type: 'spring',
