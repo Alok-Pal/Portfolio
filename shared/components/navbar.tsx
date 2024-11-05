@@ -1,4 +1,5 @@
 import React, {
+  useContext,
   // useContext
   useEffect,
   useState
@@ -7,8 +8,8 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { Menu } from 'react-feather';
 import { navlinks } from '@utils/constants';
-// import { PersonalDetails } from '@utils/types';
-// import { PersonalDetailsContext } from '@utils/contexts';
+import { PersonalDetails } from '@utils/types';
+import { PersonalDetailsContext } from '@utils/contexts';
 // import logo from 'public/images/icons/AP-final.png';
 
 type Props = {
@@ -42,7 +43,7 @@ const NavItem = ({ href, title }: Props): JSX.Element => {
 };
 
 const Navbar = (): JSX.Element => {
-  // const { logo }: PersonalDetails = useContext(PersonalDetailsContext);
+  const { logo }: PersonalDetails = useContext(PersonalDetailsContext);
   const [showMobileNav, setShowMobileNav] = useState(false);
   const [isScreenScrolled, setisScreenScrolled] = useState(false);
   const addShadowtoNav = () => {
@@ -67,13 +68,20 @@ const Navbar = (): JSX.Element => {
           <div>
             <Link href="/">
               <img
-                src="/images/icons/AP-final.png"
+                // src="/images/icons/AP-final.png"
+                src={logo}
                 alt="logo1"
                 className={`${
-                  isScreenScrolled ? 'w-1/5 md:w-3/12' : 'w-16 md:w-2/5'
+                  isScreenScrolled ? 'w-1/12 md:w-1/12' : 'w-16 md:w-1/5'
                 } pl-30 transition-all transform hover:scale-75 cursor-pointer`}
-                style={{ width: '90px' }}
               />
+              {/* <img
+                src={logo}
+                alt="logo"
+                className={`${
+                  isScreenScrolled ? 'w-1/5 md:w-3/12' : 'w-16 md:w-2/5'
+                } pl-30 my-2 transition-all transform hover:scale-75 cursor-pointer`}
+              /> */}
             </Link>
           </div>
           <div className="flex md:hidden">

@@ -3,7 +3,7 @@ import Skills from './skills';
 import Work from './work';
 import Projects from './projects';
 import Contact from './contact';
-import RepoDetails from './repo';
+// import RepoDetails from './repo';
 // import WordCloud from './wordcloud';
 
 const HomePage = (): JSX.Element => {
@@ -17,7 +17,7 @@ const HomePage = (): JSX.Element => {
           {/* <WordCloud /> */}
           <Projects />
           <Contact />
-          <RepoDetails />
+          {/* <RepoDetails /> */}
         </div>
       </div>
     </>

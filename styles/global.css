@@ -9,8 +9,8 @@ body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
   /* cursor: none; */
-  scroll-behavior: smooth;
-  overflow-x: hidden;
+  /* scroll-behavior: smooth; */
+  /* overflow-x: hidden; */
 }
 /* *:hover,
 *:active,
